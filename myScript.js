@@ -1,27 +1,58 @@
-// получаем все карточки и кнопки
-const carousel = document.querySelector('.Card-line');
-const prevButton = document.querySelector('.Nazad');
-const nextButton = document.querySelector('.Vpered');
-const cardWidth = carousel.querySelector('.Card1').offsetWidth;
+const nameInput = document.getElementById("nameInput");
 
-let currentPosition = 0;
 
-prevButton.addEventListener('click', () => {
-  if (currentPosition < 0) {
-    currentPosition += cardWidth;
-    carousel.style.transform = `translateX(${currentPosition}px)`;
-  }
-});
-
-nextButton.addEventListener('click', () => {
-  const maxPosition = -cardWidth * (carousel.querySelectorAll('.Card').length - 4);
-
-  if (currentPosition > maxPosition) {
-    currentPosition -= cardWidth;
-    carousel.style.transform = `translateX(${currentPosition}px)`;
-  }
+nameInput.addEventListener("click", function() {
+ 
+  nameInput.placeholder = "";
 });
 
 
+nameInput.addEventListener("blur", function() {
+  
+  if (!nameInput.value) {
+    nameInput.placeholder = "Ім'я";
+  }
+});
+const phoneInput = document.getElementById("phoneInput");
 
 
+phoneInput.addEventListener("click", function() {
+ 
+  phoneInput.placeholder = "";
+});
+
+
+phoneInput.addEventListener("blur", function() {
+  
+  if (!nameInput.value) {
+    phoneInput.placeholder = "Номер телефону";
+  }
+});
+const commentInput = document.getElementById("commentInput");
+
+
+commentInput.addEventListener("click", function() {
+ 
+  commentInput.placeholder = "";
+});
+
+
+commentInput.addEventListener("blur", function() {
+  
+  if (!nameInput.value) {
+    commentInput.placeholder = "Коментар";
+  }
+});
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  centeredSlides: true,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
