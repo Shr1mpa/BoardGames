@@ -45,65 +45,49 @@
 // });
 // Submit subscription form using Ajax
 // Submit subscription form using Ajax
+console.log(jQuery().jquery);
 
-
-
-//   const cards = document.querySelectorAll('.Card');
-//   const prevButton = document.querySelector('.Button-prev');
-//   const nextButton = document.querySelector('.Button-next');
-//   let currentIndex = 0;
-
-//   prevButton.addEventListener('click', () => {
-//       if (currentIndex > 0) {
-//           currentIndex--;
-//           updateCardPosition();
-//       }
-//   });
-
-//   nextButton.addEventListener('click', () => {
-//       if (currentIndex < cards.length - 1) {
-//           currentIndex++;
-//           updateCardPosition();
-//       }
-//   });
-
-  
-    const sliderInner = document.querySelector('.my-slider-inner');
-        const images = sliderInner.querySelectorAll('img');
-        const totalImages = images.length;
-        let currentIndex = 0;
-        const slideInterval = 3000; // Интервал между перелистываниями (в миллисекундах)
-
-        setInterval(nextSlide, slideInterval);
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            sliderInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-        function redirectToPage(url) {
-  window.location.href = url;
-}
-function smoothScroll(target) {
-  const element = document.querySelector(target);
-  element.style.opacity = 1; // Змінюємо прозорість на 1, щоб елемент став видимим
-  
-  window.scrollTo({
-    top: element.offsetTop,
-    behavior: 'smooth' // Додаємо плавну анімацію прокрутки
-  });
-}
-window.addEventListener('DOMContentLoaded', function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const target = urlParams.get('target');
-  
-  if (target) {
-    const element = document.querySelector(target);
-    
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  }
+$(document).on('click', '#burger', function () {
+ $('.nav-menu').toggleClass('active');
 });
+
+$('#subscription_form').on('submit', function (e) {
+ e.preventDefault();
+ var $form = $(this);
+ $.ajax({
+ type: 'POST',
+ url: './subscription_ajax.php',
+ data: $form.serialize()
+ }).done(function () {
+ $form[0].reset();
+ alert('Дякуємо за підписку!');
+ }).fail(function () {
+ alert('Сталася помилка');
+ });
+});
+  const cards = document.querySelectorAll('.Card');
+  const prevButton = document.querySelector('.Button-prev');
+  const nextButton = document.querySelector('.Button-next');
+  let currentIndex = 0;
+
+  prevButton.addEventListener('click', () => {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateCardPosition();
+      }
+  });
+
+  nextButton.addEventListener('click', () => {
+      if (currentIndex < cards.length - 1) {
+          currentIndex++;
+          updateCardPosition();
+      }
+  });
+
+  function updateCardPosition() {
+      const cardWidth = cards[0].offsetWidth;
+      const translateX = -currentIndex * cardWidth;
+      cards.forEach(card => {
+          card.style.transform = `translateX(${translateX}px)`;
+      });
+  }
