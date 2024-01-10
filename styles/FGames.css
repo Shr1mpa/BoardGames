@@ -1,0 +1,46 @@
+.header2-Family {
+    height: 30vh;
+  width: 100%;
+    justify-content: space-between;
+    background-size: cover;
+  
+    background-repeat: no-repeat;
+  
+    background-image: url(/images/22782.png);
+  }
+  .discr-shop-club-Family {
+    font-weight: thin;
+    font-style: normal;
+    font-weight: 600;
+    margin-left: 230px;
+    
+    font-size: 25px;
+    line-height: 23px;
+    line-height: 100%;
+    align-items: Left;
+    vertical-align: Top;
+    color: #ffff;
+  }
+  .discr-shop-club2-Family {
+    font-weight: thin;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 230px;
+  
+    font-size: 16px;
+    line-height: 23px;
+    line-height: 100%;
+    align-items: Left;
+  
+    color: #ffff;
+  }
+  .bg-color-Family {
+    
+    background-color: rgba(128, 128, 128, 0.2);
+    height: 30vh;
+  }
+  .bg-color-wh{
+    
+    background-color: rgba(227, 228, 138, 0.2);
+   height: 20%;
+  }

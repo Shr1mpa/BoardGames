@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   width: 100%;
-  background-image: url(images/BgProbnik4.png);
+  background-image: url(/images/BgProbnik4.png);
   background-size: 100%;
   min-height: 100vh;
   /* width: 100%; */
@@ -99,7 +99,7 @@ width: 100%;
 
   background-repeat: no-repeat;
 
-  background-image: url(images/fon26.png);
+  background-image: url(/images/fon26.png);
 }
 .bg-color {
   background-color: rgba(128, 128, 128, 0.2);
@@ -301,7 +301,7 @@ width: 100%;
 .Magic {
   height: 100%;
   width: 100%;
-  background-image: url(images/BgProbnik4.png);
+  background-image: url(/images/BgProbnik4.png);
   background-size: 100%;
 }
 .content-name {
@@ -327,7 +327,7 @@ width: 100%;
 .g-list1 {
   list-style-type: none;
   font-size: 13px;
-  background-image: url(images/Rectangle315.png);
+  background-image: url(/images/Rectangle315.png);
   border-radius: 10px;
   padding-top: 4%;
   padding-bottom: 4%;
@@ -353,7 +353,7 @@ width: 100%;
   border-radius: 11px;
   border: none;
   color: #fff;
-  background-image: url(images/RectangleButton.png);
+  background-image: url(/images/RectangleButton.png);
   width: 25%;
   height: 10%;
   padding: 15px 15px;
@@ -375,7 +375,7 @@ width: 100%;
 /* Magic2 */
 .Magic1 {
   
-  background-image: url(images/BgProbnik4.png);
+  background-image: url(/images/BgProbnik4.png);
   background-size: 100%;
 
   height: 100%;
@@ -428,13 +428,21 @@ width: 100%;
 
   border-radius: 9px;
 }
+
 .Card-line {
+  overflow: visible;
   margin-left: 10%;
   margin-top: 16%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  position: relative;
+        
+        white-space: nowrap;
+        width: 90%;
+  
+        
 }
 
 .Card1 {
@@ -449,6 +457,20 @@ width: 100%;
   height: 21.5em;
   scroll-snap-align: start;
 }
+.Card-slider{
+  
+    
+  
+    border-radius: 7px;
+    padding: 1% 0.5%;
+    transition: transform 0.3s ease-in-out;
+  
+    background-color: black;
+    width: 15.8em;
+    height: 21.5em;
+    
+  
+}
 .Card1:hover {
   transform: scale(1.1);
 }
@@ -462,7 +484,7 @@ width: 100%;
   transform: scale(1.1);
 }
 .second-bg {
-  background-image: url(images/SecondBg.png);
+  background-image: url(/images/SecondBg.png);
   height: 21.875em;
   width: 14.4375em;
   border-radius: 15px;
@@ -670,7 +692,7 @@ width: 100%;
 .Magic2 {
   background-size: cover;
 
-  background-image: url(images/BgProbnik4.png);
+  background-image: url(/images/BgProbnik4.png);
   background-size: 100%;
   z-index: 0;
 
@@ -950,7 +972,7 @@ width: 100%;
   width: 37%;
   height: 105%;
   white-space: nowrap;
-  background-image: url(images/Rectangle315.png);
+  background-image: url(/images/Rectangle315.png);
   margin-left: 10%;
   background-size: cover;
 margin-top: 5%;
@@ -1124,6 +1146,57 @@ iframe{
 }
 .fa-cart-shopping:hover {
   color: #BA55D3;
+}
+/* Dropduwn */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* Swiper */
+.Button-prev, .Button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+ 
+        
+  
+}
+
+.Button-prev {
+  margin-left: -10%;
+}
+
+.Button-next {
+  right: 10px;
 }
 
 
