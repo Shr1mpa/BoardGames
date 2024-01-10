@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="slidergpt.css" />
+    <link rel="stylesheet" href="FGames.css" />
+    <link rel="stylesheet" href="itc-slider.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="about.css" />
+    <script
+      src="https://kit.fontawesome.com/5e376815bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Cards.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="Tovar.css" />
+    <link rel="stylesheet" href="Events.css" />
+    <title>MagiCodice</title>
+  </head>
+  <body>
+    <!-- Heder with Logo -->
+    <div class="header1">
+      <a href="index.html"
+        ><div class="logo">
+          <img class="logo-img" src="images/LogoTopPng.png" alt="" /></div
+      ></a>
+
+      <div class="phone">
+        <div class="phone-holder">
+          <a class="num Phone" href="*"
+            ><i class="fa-solid fa-phone fa-xl"></i>+380556548790</a
+          >
+
+          <div class="profile-holder">
+            <a href="login.php">
+              <i class="fa-solid fa-user fa-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header with Menu -->
+    <div class="header2-Family">
+      <div class="bg-color-wh">
+        <div class="container">
+          <div class="header-line">
+            <div class="nav">
+              <div class="dropdown">
+                <a class="nav-item2 Menu" href="index.html?target=#Magic1"
+                  ><i class="fa-solid fa-bars nav-icon"></i>Каталог</a
+                >
+                <!-- <div class="dropdown-content">
+                  <a href="FamilyGames.html">Для сім'ї</a>
+                  <a href="#">Для двох</a>
+                  <a href="#">Для вечірок</a>
+                  <a href="#">Аксесуари</a>
+                </div> -->
+              </div>
+
+              <a class="nav-item" href="Events.html">Новини</a>
+              <a class="nav-item" href="TheGathering.html"
+                >Magic:the Cathering</a
+              >
+
+              <a class="nav-item" href="aboutUs.html">Про нас</a>
+              <a class="nav-item" href="index.html?target=#Contacts"
+                >Контакти</a
+              >
+
+              <a class="nav-item1" href="https://www.instagram.com/igromag/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="nav-item1" href="https://www.facebook.com/IgromagUa/?locale=ru_RU"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="Events1">
+      <div class="align">
+        <figure class="snip1369 green">
+          <img src="images/Event1.png" alt="pr-sample15" />
+          <div class="image">
+            <img src="images/Event1.png" alt="pr-sample15" />
+          </div>
+          <figcaption>
+            <h3>Halloween c Magicodice</h3>
+            <p>
+              Ми зберемося, щоб дізнатися, хто ж таки був Мафією і що буде з
+              тим,кого вбили.
+            </p>
+          </figcaption>
+          <span class="read-more">
+            Дізнатись більше <i class="ion-android-arrow-forward"></i
+          ></span>
+          <a href="#"></a>
+        </figure>
+        <figure class="snip1369 green">
+          <img src="images/Event4.png" alt="pr-sample15" />
+          <div class="image">
+            <img src="images/Event4.png" alt="pr-sample15" />
+          </div>
+          <figcaption>
+            <h3>Вечір настільних ігор</h3>
+            <p>
+              Щотижневі настільні ігротеки в різні ігри.Зустрічі проходять у
+              антикафе, в кафе та бібліотеках.
+            </p>
+          </figcaption>
+          <span class="read-more">
+            Дізнатись більше <i class="ion-android-arrow-forward"></i
+          ></span>
+          <a href="#"></a>
+        </figure>
+
+        <div id="calendar">
+          <div class="cl1">
+            <button id="prevBtn">&lt;</button>
+            <div id="month"></div>
+            <button id="nextBtn">&gt;</button>
+          </div>
+          <div id="weekdays"></div>
+          <div id="dates"></div>
+          <div id="controls"></div>
+        </div>
+      </div>
+      <div class="second-l">
+        <figure class="snip1360 green">
+          <img src="images/Event3.png" alt="pr-sample15" />
+          <div class="image">
+            <img src="images/Event3.png" alt="pr-sample15" />
+          </div>
+          <figcaption>
+            <h3>Нічна ігротека</h3>
+            <p>
+              Нічна ігротека - місце, де можна повеселитися великою компанією.
+            </p>
+          </figcaption>
+          <span class="read-more">
+            Дізнатись більше <i class="ion-android-arrow-forward"></i
+          ></span>
+          <a href="#"></a>
+        </figure>
+        <figure class="snip1360 green">
+          <img src="images/Event2.png" alt="pr-sample15" />
+          <div class="image">
+            <img src="images/Event2.png" alt="pr-sample15" />
+          </div>
+          <figcaption>
+            <h3>Битва титанів</h3>
+            <p>Ніч авторів українських настільних ігор у нашому клубі!</p>
+          </figcaption>
+          <span class="read-more">
+            Дізнатись більше <i class="ion-android-arrow-forward"></i
+          ></span>
+          <a href="#"></a>
+        </figure>
+        <figure class="snip1360">
+          <img src="images/Event5.jpg" alt="pr-sample15" />
+          <div class="image">
+            <img src="images/Event5.jpg" alt="pr-sample15" />
+          </div>
+          <figcaption>
+            <h3>Турнір "7 Чудес: Дуель"</h3>
+            <p>Ми запрошуємо усіх хто впевнений у своїх силах взяти участь.</p>
+          </figcaption>
+          <span class="read-more">
+            Дізнатись більше <i class="ion-android-arrow-forward"></i
+          ></span>
+          <a href="#"></a>
+        </figure>
+      </div>
+    </section>
+    <footer class="footerTovar">
+      <div class="column1">
+        <img class="logodown" src="images/LogoTopPng.png" alt="logodown" />
+        <h2 class="board-place">м.Хмельницький, вул.Проскурівська 67</h2>
+      </div>
+      <div class="column2">
+        <h2 class="alp">Каталог</h2>
+
+        <h3 onclick="smoothScroll('#Magic1')">Настільні ігри</h3>
+        <a href="TheGathering.html"><h3>Magic: the Gathering</h3></a>
+        <h3 onclick="smoothScroll('#Accesories')">Аксесуари для ігор</h3>
+      </div>
+      <div class="column3">
+        <a href="Events.html"><h3>Заходи</h3></a>
+        <a href="aboutUs.html"><h3>Про нас</h3></a>
+        <a href="index.html?target=#Contacts"><h3>Контакти</h3></a>
+      </div>
+
+      <div class="column5">
+        <a href="#subscription_form"
+          ><button class="button-footer" type="button">
+            Замовити дзвінок
+          </button></a
+        >
+        <h3>+380556548790</h3>
+        <h3>magiccodice@gmail.com</h3>
+        <a class="nav-item1" href="https://www.instagram.com/igromag/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          class="nav-item1"
+          href="https://www.facebook.com/IgromagUa/?locale=ru_RU"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="Event.js"></script>
+    <script src="JS/myScript.js"></script>
+    <script src="slidgpt.js"></script>
+    <script src="itc-slider.js"></script>
+    <script src="Categories.js"></script>
+    <script src="TovrSl.js"></script>
+  </body>
+</html>

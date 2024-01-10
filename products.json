@@ -1,0 +1,22 @@
+{
+  "1": {
+    "name": "Ходу Героям Нема",
+    "price": "2000 ₴",
+    "mainPhoto": "images/Tovar1",
+    "thumbnailPhotos": [
+      "images/Tovar3",
+      "images/Tovar4",
+      "images/Tovar5"
+    ]
+  },
+  "2": {
+    "name": "Інший товар",
+    "price": "1500 ₴",
+    "mainPhoto": "images/OtherProduct.png",
+    "thumbnailPhotos": [
+      "images/OtherProduct.png",
+      "images/OtherProductThumb1.png",
+      "images/OtherProductThumb2.png"
+    ]
+  }
+}

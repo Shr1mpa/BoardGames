@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="slidergpt.css" />
+    <link rel="stylesheet" href="FGames.css" />
+    <link rel="stylesheet" href="itc-slider.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="about.css" />
+    <script
+      src="https://kit.fontawesome.com/5e376815bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Cards.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="Tovar.css" />
+    <title>MagiCodice</title>
+  </head>
+  <body>
+    <!-- Heder with Logo -->
+    <div class="header1">
+      <a href="index.html"
+        ><div class="logo">
+          <img class="logo-img" src="images/LogoTopPng.png" alt="" /></div
+      ></a>
+
+      <div class="phone">
+        <div class="phone-holder">
+          <a class="num Phone" href="*"
+            ><i class="fa-solid fa-phone fa-xl"></i>+380556548790</a
+          >
+
+          <div class="profile-holder">
+            <a href="login.php">
+              <i class="fa-solid fa-user fa-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header with Menu -->
+    <div class="header2-Family">
+      <div class="bg-color-wh">
+        <div class="container">
+          <div class="header-line">
+            <div class="nav">
+              <div class="dropdown">
+                <a class="nav-item2 Menu" href="index.html?target=#Magic1"
+                  ><i class="fa-solid fa-bars nav-icon"></i>Каталог</a
+                >
+                <!-- <div class="dropdown-content">
+                  <a href="FamilyGames.html">Для сім'ї</a>
+                  <a href="#">Для двох</a>
+                  <a href="#">Для вечірок</a>
+                  <a href="#">Аксесуари</a>
+                </div> -->
+              </div>
+
+              <a class="nav-item" href="Events.html">Новини</a>
+              <a class="nav-item" href="TheGathering.html"
+                >Magic:the Cathering</a
+              >
+
+              <a class="nav-item" href="aboutUs.html">Про нас</a>
+              <a class="nav-item" href="index.html?target=#Contacts"
+                >Контакти</a
+              >
+
+              <a class="nav-item1" href="https://www.instagram.com/igromag/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                class="nav-item1"
+                href="https://www.facebook.com/IgromagUa/?locale=ru_RU"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="Tovar-slide">
+      <div class="Inf-sec"></div>
+      <div class="gallery">
+        <div class="main-photo">
+          <img src="images/Tovar1.jpeg" alt="Big Photo" id="mainPhoto" />
+        </div>
+        <div class="thumbnail-photos">
+          <img
+            src="images/Tovar1.jpeg"
+            alt="Small Photo 1"
+            onclick="changeMainPhoto(this, 'images/Tovar1.jpeg')"
+            class="thumbnail"
+          />
+          <img
+            src="images/Tovar3.jpeg"
+            alt="Small Photo 2"
+            onclick="changeMainPhoto(this, 'images/Tovar3.jpeg')"
+            class="thumbnail"
+          />
+          <img
+            src="images/Tovar4.jpeg"
+            alt="Small Photo 3"
+            onclick="changeMainPhoto(this, 'images/Tovar4.jpeg')"
+            class="thumbnail"
+          />
+          <img
+            src="images/Tovar5.jpeg"
+            alt="Small Photo 4"
+            onclick="changeMainPhoto(this, 'images/Tovar5.jpeg')"
+            class="thumbnail"
+          />
+        </div>
+      </div>
+      <div class="Inf-Tovar">
+        <div class="line1">
+          <div class="users">
+            <i class="fa-solid fa-users fa-xl"></i>
+            <p>2-6</p>
+          </div>
+          <div class="time">
+            <i class="fa-regular fa-clock fa-xl"></i>
+            <p>1-1.5 год</p>
+            <h3>6+</h3>
+          </div>
+          <h2>2000 ₴</h2>
+          <button
+            class="buy"
+            onclick="redirectToPage('https://boardgamegeek.com/boardgame/333255/keep-heroes-out')"
+          >
+            Детальніше
+          </button>
+        </div>
+      </div>
+      <li class="list-tovar list-item">
+        <h2 class="mi3 main-item">Доставка</h2>
+        <ul class="subl sublist1">
+          <p>
+            - Новою поштою по всій Україні (1-2 дні) <br />
+            - Укрпоштою (По Україні та всьому світу) <br />
+            - Безкоштовно при замовленні від 2000 грн
+          </p>
+        </ul>
+      </li>
+    </section>
+    <section class="Describe">
+      <div class="container1">
+        <div class="element active" onclick="showText('text1', this)">Опис</div>
+        <div class="element" onclick="showText('text2', this)">
+          Характеристики
+        </div>
+        <div class="element" onclick="showText('text3', this)">Правила</div>
+        <div class="element" onclick="showText('text4', this)">
+          Питання-відповідь
+        </div>
+      </div>
+
+      <div id="text-container">
+        <div id="text1" class="text">
+          <h2>Ходу героям нема! Фентезійний кооператив</h2>
+          <p>
+            Тільки-но уявіть, у ваше затишне підземелля намагаються прорватися
+            якісь «герої». Монстри, ящірколюди та слизняки хоробро стануть на
+            захист свого підземного спокою. <br /><br />
+            «Keep the Heroes Out!» – кооперативна гра з механікою
+            колодобудівництва та асиметричними силами. <br /><br />
+            Кожна фракція має своїх індивідуальних міплів і використовує свої
+            унікальні здібності, але всі вони постійно співпрацюють між собою,
+            адже захист підземелля – нелегка справа.
+          </p>
+          <h3>Перебіг гри</h3>
+          <ol>
+            <li>
+              Гравці ходять по підземних клітинках, нападають на героїв,
+              розставляють пастки, збирають та скидають предмети, купують карти
+              та ув'язнюють нападників.
+            </li>
+            <li>
+              У свій хід монстр може зіграти карту або декілька карт. Піктограми
+              на картах дають можливість виконати певні дії (взяти нову карту,
+              активувати здатність свого монстра або дію кімнати підземелля,
+              рухатися, атакувати чи захищатися).
+            </li>
+            <li>
+              В залежності від обраного режиму складності партії гравцям будуть
+              протистояти 2,4 або 6 героїв, які на старті знаходитимуться в
+              різних кімнатах підземелля та цілеспрямовано рухатимуться до вашої
+              скарбниці, щоб пограбувати її.
+            </li>
+            <li>
+              Після ходу кожного монстра гравця розігрується карта гільдії (хід
+              героїв). Коли відкрито певну кількість карт гільдій згідно правил
+              - починається наступний рівень.
+            </li>
+          </ol>
+          <h3>Як перемогти</h3>
+          <ul>
+            <li>
+              Щоб перемогти гру, необхідно врятувати скарби від атаки протягом
+              трьох рівнів.
+            </li>
+            <li>
+              Гра відразу завершується поразкою гравців, якщо героям вдалося
+              захопити 4-ту скриню зі скарбами.
+            </li>
+          </ul>
+          <h3>Хороші і погані монстри</h3>
+          <p>
+            Більшість монстрів у грі - поганці, але є і хороші монстри, як от
+            дракони. Деякі з них дуже сильні, а деякі потребують більшого
+            планування та правильного поєднання. Ви можете спробувати різні
+            комбінації та різні ігрові режими. <br /><br />
+            Настільна гра «Ходу героям нема!» включає декілька кооперативних
+            сценаріїв та різні рівні складності. Крім високої реіграбельності
+            можна відзначити важливість кожного учасника партії та його
+            особистої колоди. Кожна франція тут грає по-різному.
+          </p>
+        </div>
+        <div id="text2" class="text">
+          <table class="Charackters">
+            <tr>
+              <td class="first-col">Доповнення</td>
+              <td class="second-col">
+                Ходу Героям Нема: Помста Магістра Гільдії
+              </td>
+            </tr>
+            <tr>
+              <td class="accessories">
+                Аксесуари
+                <span class="tooltip">
+                  <i class="fa-regular fa-circle-question fa-2xs"></i>
+                  <span class="tooltip-text"
+                    >Зверніть увагу! Рекомендовані дані про розмір протекторів і
+                    кількість пачок носять ознайомчий характер і, в окремих
+                    випадках, з тих чи інших причин, можуть бути не
+                    точними.</span
+                  >
+                </span>
+              </td>
+              <td class="second-col">Протектори 57.5x89 (100 шт) - 3 пачки</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="second-col">
+                Преміальні протектори 57.5x89 (50 шт) - 5 пачок
+              </td>
+            </tr>
+            <tr>
+              <td class="first-col">Видавець</td>
+              <td class="second-col">Ігромаг</td>
+            </tr>
+            <tr>
+              <td class="first-col">
+                Мова
+                <span class="tooltip">
+                  <i class="fa-regular fa-circle-question fa-2xs"></i>
+                  <span class="tooltip-text">Мова видання гри.</span>
+                </span>
+              </td>
+              <td class="second-col">Українська</td>
+            </tr>
+            <tr>
+              <td class="first-col">
+                Текст у грі
+                <span class="tooltip">
+                  <i class="fa-regular fa-circle-question fa-2xs"></i>
+                  <span class="tooltip-text"
+                    >Наскільки легко можна грати в гру, не володіючи мовою
+                    видання: Мовонезалежна - легко. У грі немає тексту (крім
+                    правил). Мало - іноді доведеться звертатися за підказкою.
+                    Багато - практично неможливо без перекладу.</span
+                  >
+                </span>
+              </td>
+              <td class="second-col">Мовнонезалежна</td>
+            </tr>
+            <tr>
+              <td class="first-col">Час партії</td>
+              <td class="second-col">40-50 хвилин</td>
+            </tr>
+            <tr>
+              <td class="first-col">Гравців</td>
+              <td class="second-col">1-4</td>
+            </tr>
+            <tr>
+              <td class="first-col">Вік</td>
+              <td class="second-col">10+</td>
+            </tr>
+            <tr>
+              <td class="first-col">
+                BGG
+                <span class="tooltip">
+                  <i class="fa-regular fa-circle-question fa-2xs"></i>
+                  <span class="tooltip-text"
+                    >Найбільший світовий ресурс, присвячений настільним іграм.
+                    Англійською мовою.</span
+                  >
+                </span>
+              </td>
+              <td class="second-col">
+                <a
+                  href="https://boardgamegeek.com/boardgame/333255/keep-heroes-out"
+                  >More info</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="first-col">Основний розділ</td>
+              <td class="second-col">Кооперативні</td>
+            </tr>
+            <tr>
+              <td class="first-col">Додатковий</td>
+              <td class="second-col">
+                Настільні ігри, Сімейні, Новачкам, Соло, Фентезі, 10-13 років
+              </td>
+            </tr>
+            <tr>
+              <td class="first-col">
+                У коробці
+                <span class="tooltip">
+                  <i class="fa-regular fa-circle-question fa-2xs"></i>
+                  <span class="tooltip-text"
+                    >Це орієнтовна інформація. Видавець міг змінити склад гри
+                    без повідомлення. Точний склад гри ви знайдете в правилах
+                    всередині коробки.</span
+                  >
+                </span>
+              </td>
+              <td class="Inside">45 фігурок-міплів монстрів</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">12 кімнат підземелля</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">80 карт гільдії</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">16 карт героїв</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">64 карти сценаріїв</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">90 карт тактики</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">9 карт планів</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">28 карт предметів</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">16 карт дій</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">98 жетонів</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">20 жетонів ресурсів</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">5 жетонів пасток</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">5 жетонів подій</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">20 жетонів ран</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">20 жетонів героїв</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">16 жетонів скарбів</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">10 жетонів порталів</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">1 жетон активного гравця</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">1 жетон хвилі 0</td>
+            </tr>
+            <tr>
+              <td class="accessories"></td>
+              <td class="Inside">правила</td>
+            </tr>
+          </table>
+        </div>
+        <div id="text3" class="text">
+          <a href="https://desktopgames.com.ua/games/6829/rulebook_6_UA.pdf"
+            >Завантажити правила настільної гри Ходу героям нема українською
+            мовою</a
+          >
+          <br />
+          <a
+            class="link1"
+            href="https://desktopgames.com.ua/games/6829/rulebook_scenarios_v3_UA.pdf"
+            >Завантажити сценарії настільної гри Ходу героям нема українською
+            мовою</a
+          >
+        </div>
+        <div id="text4" class="text">
+          <li class="list-item">
+            <h2 class="mi2 main-item">- Як оформити замовлення</h2>
+            <ul class="subl2 sublist1">
+              <p>
+                На верхній панелі сайту розміщений значок «Кошик», куди
+                потрапляють всі вибрані вами товари. Перейшовши туди, можете
+                переглянути та відкоригувати замовлення:
+              </p>
+              <li>
+                прибрати зайві позиції (використовуйте «кошик для сміття»);
+              </li>
+              <li>
+                збільшити або зменшити кількість обраних товарів, натиснувши на
+                «+» або «-».
+              </li>
+              <p>
+                Під списком товарів побачите загальну суму замовлення (без
+                урахування витрат на доставку).
+              </p>
+              <h4>
+                Коли остаточно визначилися з переліком товарів, можна переходити
+                до оформлення замовлення.
+              </h4>
+              <h4>Основні кроки:</h4>
+              <li>Заповніть форму зі своїми даними:</li>
+              <ol>
+                <li>прізвище;</li>
+                <li>ім'я;</li>
+                <li>контактний номер телефону;</li>
+                <li>e-mail.</li>
+              </ol>
+              <li>
+                Місто, номер складу Нової пошти. Якщо це адресна доставка
+                кур'єром Нової пошти, тоді точну адресу доставки. Також
+                замовлення можна отримати в поштоматі.
+              </li>
+              <li>
+                При необхідності в коментарях напишіть дані одержувача, якщо
+                замовник і отримувач — різні люди.
+              </li>
+              <li>Натисніть на кнопку «Підтвердити замовлення»</li>
+            </ul>
+          </li>
+          <li class="list-item">
+            <h2 class="mi2 main-item">- Як підібрати настільну гру?</h2>
+            <ul class="subl2 sublist1">
+              <p>
+                Якщо у настільній грі збирається взяти участь компанія, потрібно
+                враховувати середній вік гравців. Є ігри, які не вимагають
+                активності і навряд чи сподобаються молоді, а рухливі не
+                припадуть до душі людям похилого віку. <br /><br />
+                Багато ігор призначені лише для великої кількості учасників, а
+                інші – строго для двох. Бувають і індивідуальні варіанти, але
+                найчастіше кількість учасників - від двох до чотирьох. Кількість
+                гравців, на яку розрахована гра, написано на її упаковці.
+                Важливо відразу вирішити, скільки людей візьмуть участь у грі.
+                Деякі настільні ігри можуть бути нудними лише для двох. Якщо
+                найчастіше гратимуть саме двоє, не варто купувати ігри, які
+                розраховані на велику компанію. <br /><br />
+                Вирізняють кілька типів настільних ігор: інтелектуальні, творчі,
+                рухливі та кооперативні. Інтелектуальні більше призначені для
+                дітей, яким треба розвивати логіку та ерудицію. У форматі розваг
+                вони зможуть тренувати пам'ять та мислення. До таких ігор
+                належать мемо, де треба запам'ятовувати картинки чи слова.
+                Стратегічні та економічні розвивають навички підприємця та
+                стратега. Вони навчають грамотного планування. Творчі ігри
+                розвивають уяву. Вони потребують більшої концентрації. Рухливі
+                ігри більше сподобаються компаніям, тому що спрямовані на
+                взаємодію між гравцями. У кооперативній грі дитина розвиватиме
+                мовлення та комунікативні навички за допомогою спілкування з
+                іншими гравцями. <br /><br />
+                Ігри вибирають і за тривалістю процесу: від кількох хвилин до
+                кількох годин. Час гри також залежить від кількості учасників та
+                від того, наскільки вони добре знають правила.
+              </p>
+            </ul>
+          </li>
+          <li class="list-item">
+            <h2 class="mi2 main-item">- Як оплатити замовлення?</h2>
+            <ul class="subl2 sublist1">
+              <p>
+                Щоб оплатити замовлення в нашому магазині настільних ігор, ми
+                пропонуємо декілька зручних способів оплати:
+              </p>
+              <ol>
+                <li>
+                  Кредитна або дебетова карта: Ми приймаємо оплату за допомогою
+                  більшості поширених кредитних та дебетових карт, таких як
+                  Visa, Mastercard, American Express тощо. Вам потрібно буде
+                  ввести необхідну інформацію про вашу карту, яку ми обробимо за
+                  допомогою безпечного платіжного шлюзу.
+                </li>
+                <li>
+                  Електронні платіжні системи: Ми також приймаємо оплату через
+                  різні електронні платіжні системи, такі як PayPal, Apple Pay,
+                  Google Pay і інші. Якщо у вас є обліковий запис у відповідній
+                  платіжній системі, ви можете використовувати її для здійснення
+                  оплати замовлення.
+                </li>
+                <li>
+                  Банківський переказ: Для клієнтів, які бажають здійснити
+                  оплату через банківський переказ, ми надаємо відповідні
+                  банківські реквізити. Ви зможете здійснити переказ грошей з
+                  вашого банківського рахунку на наш.
+                </li>
+                <li>
+                  Оплата при отриманні (доставка): Якщо ви обираєте доставку з
+                  можливістю оплати при отриманні, ви зможете оплатити
+                  замовлення готівкою або карткою під час отримання товару від
+                  нашого кур'єра.
+                </li>
+              </ol>
+              <p>
+                Будь ласка, оберіть найзручніший для вас спосіб оплати, а під
+                час оформлення замовлення будуть надані деталі інструкцій з
+                оплати. Якщо у вас є будь-які додаткові запитання або потреба в
+                допомозі, наші співробітники завжди готові надати вам необхідну
+                інформацію та підтримку.
+              </p>
+            </ul>
+          </li>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footerTovar">
+      <div class="column1">
+        <img class="logodown" src="images/LogoTopPng.png" alt="logodown" />
+        <h2 class="board-place">м.Хмельницький, вул.Проскурівська 67</h2>
+      </div>
+      <div class="column2">
+        <h2 class="alp">Каталог</h2>
+
+        <h3 onclick="smoothScroll('#Magic1')">Настільні ігри</h3>
+        <a href="TheGathering.html"><h3>Magic: the Gathering</h3></a>
+        <h3 onclick="smoothScroll('#Accesories')">Аксесуари для ігор</h3>
+      </div>
+      <div class="column3">
+        <a href="Events.html"><h3>Заходи</h3></a>
+        <a href="aboutUs.html"><h3>Про нас</h3></a>
+        <a href="index.html?target=#Contacts"><h3>Контакти</h3></a>
+      </div>
+
+      <div class="column5">
+        <a href="#subscription_form"
+          ><button class="button-footer" type="button">
+            Замовити дзвінок
+          </button></a
+        >
+        <h3>+380556548790</h3>
+        <h3>magiccodice@gmail.com</h3>
+        <a class="nav-item1" href="https://www.instagram.com/igromag/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          class="nav-item1"
+          href="https://www.facebook.com/IgromagUa/?locale=ru_RU"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="JS/myScript.js"></script>
+    <script src="slidgpt.js"></script>
+    <script src="itc-slider.js"></script>
+    <script src="Categories.js"></script>
+    <script src="TovrSl.js"></script>
+  </body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="slidergpt.css" />
+    <link rel="stylesheet" href="FGames.css" />
+    <link rel="stylesheet" href="itc-slider.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/5e376815bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Cards.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="styles/footer.css" />
+
+    <title>MagiCodice</title>
+  </head>
+  <body>
+    <!-- Heder with Logo -->
+    <div class="header1">
+      <a href="index.html"
+        ><div class="logo">
+          <img class="logo-img" src="images/LogoTopPng.png" alt="" /></div
+      ></a>
+
+      <div class="phone">
+        <div class="phone-holder">
+          <a class="num Phone" href="*"
+            ><i class="fa-solid fa-phone fa-xl"></i>+380556548790</a
+          >
+
+          <div class="profile-holder">
+            <a href="login.php">
+              <i class="fa-solid fa-user fa-xl"></i>
+            </a>
+          </div>
+          <div class="cart-holder">
+            <a href="*">
+              <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header with Menu -->
+    <div class="header2-Family">
+      <div class="bg-color-wh">
+        <div class="container">
+          <div class="header-line">
+            <div class="nav">
+              <div class="dropdown">
+                <a class="nav-item2 Menu" href="*"
+                  ><i class="fa-solid fa-bars nav-icon"></i>Каталог</a
+                >
+                <div class="dropdown-content">
+                  <a href="FamilyGames.html">Для сім'ї</a>
+                  <a href="#">Для двох</a>
+                  <a href="#">Для вечірок</a>
+                  <a href="#">Аксесуари</a>
+                </div>
+              </div>
+
+              <a class="nav-item" href="Events.html">Новини</a>
+              <a class="nav-item" href="TheGathering.html">Magic:the Cathering</a>
+              <a class="nav-item" href="*">D&D</a>
+              <a class="nav-item" href="aboutUs.html">Про нас</a>
+              <a class="nav-item" href="*">Контакти</a>
+
+              <a class="nav-item1" href="*"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="nav-item1" href="*"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Decor">
+      <div class="bg-color-Family">
+        <div class="Text-header">
+          <h2 class="discr-shop-club-Family">
+            Жовтневий турнір Warhammer 40000
+          </h2>
+          <p class="discr-shop-club2-Family">
+            У тебе є команда і ви готові прийняти участь у турнірі Warhammer
+            40000?
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="Name-Game">
+      <span><h2>Сімейні настільні ігри</h2></span>
+      <div class="Sorting">
+        <h3>Сортування:</h3>
+        <button class="sort-btn">За популярністю</button>
+        <button class="sort-btn">Спочатку дешевше</button>
+        <button class="sort-btn">Спочатку дорожче</button>
+        <button class="sort-btn">За назвою</button>
+        <button class="sort-btn">Спочатку нові</button>
+      </div>
+      <div class="CardsMenu">
+        <div class="Categories">
+          <ul class="list">
+            <li class="list-item">
+              <h2 class="main-item">Ціна</h2>
+              <ul class="sublist">
+                <div class="input-container">
+                  <li>
+                    <input
+                      type="text"
+                      id="fromInput"
+                      placeholder="Від"
+                      oninput="updateSliderValue(this.value)"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="toInput"
+                      placeholder="До"
+                      value="5290"
+                    />
+                  </li>
+                  <li>
+                    <button class="submit-btn" onclick="updatePriceRange()">
+                      ОК
+                    </button>
+                  </li>
+                </div>
+                <input
+                  class="polzunok"
+                  type="range"
+                  id="priceSlider"
+                  min="0"
+                  max="5290"
+                  value="0"
+                  step="1"
+                  oninput="updateTextInput(this.value)"
+                />
+              </ul>
+            </li>
+
+            <li class="list-item">
+              <h2 class="main-item">Наявність</h2>
+              <ul class="sublist">
+                <div class="check-nav">
+                  <div class="con-check1">
+                    <input type="checkbox" id="checkbox1" />
+                    <label for="checkbox1">В наявності</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox2" />
+                    <label class="check" for="checkbox1">Предзамовлення</label>
+                  </div>
+
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox3" />
+                    <label for="checkbox1">Очікується</label>
+                  </div>
+
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox4" />
+                    <label for="checkbox1">Немає в наявності</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox5" />
+                    <label class="check" for="checkbox1">Акція</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox6" />
+                    <label class="check" for="checkbox1">Новинка</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox7" />
+                    <label class="check" for="checkbox1">Уцінка</label>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="list-item">
+              <h2 class="main-item">
+                Мова
+                <span class="tooltip">
+                  <i class="fa-regular fa-circle-question fa-2xs"></i>
+                  <span class="tooltip-text">Мова видання гри.</span>
+                </span>
+              </h2>
+              <ul class="sublist">
+                <div class="check-nav">
+                  <div class="con-check1">
+                    <input type="checkbox" id="checkbox1" />
+                    <label for="checkbox1">Українська</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox2" />
+                    <label class="check" for="checkbox1">Англійська</label>
+                  </div>
+
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox3" />
+                    <label for="checkbox1">Німецька</label>
+                  </div>
+
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox4" />
+                    <label for="checkbox1">Польська</label>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="list-item">
+              <h2 class="main-item">
+                Текст у грі
+                <span class="tooltip">
+                  <i class="fa-regular fa-circle-question fa-2xs"></i>
+                  <span class="tooltip-text"
+                    >Наскільки легко можна грати в гру, не володіючи мовою
+                    видання: Мовонезалежна - легко. У грі немає тексту (крім
+                    правил). Мало - іноді доведеться звертатися за підказкою.
+                    Багато - практично неможливо без перекладу.</span
+                  >
+                </span>
+              </h2>
+              <ul class="sublist">
+                <div class="check-nav">
+                  <div class="con-check1">
+                    <input type="checkbox" id="checkbox1" />
+                    <label for="checkbox1">Мовнонезалежна</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox2" />
+                    <label class="check" for="checkbox1">Мало</label>
+                  </div>
+
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox3" />
+                    <label for="checkbox1">Багато</label>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="list-item">
+              <h2 class="main-item">Кількість гравців</h2>
+              <ul class="sublist">
+                <div class="check-nav">
+                  <div class="con-check1">
+                    <input type="checkbox" id="checkbox1" />
+                    <label for="checkbox1">1</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox2" />
+                    <label class="check" for="checkbox1">2</label>
+                  </div>
+
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox3" />
+                    <label for="checkbox1">3</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox4" />
+                    <label for="checkbox1">4</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox5" />
+                    <label for="checkbox1">5</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox6" />
+                    <label for="checkbox1">6</label>
+                  </div>
+                  <div class="con-check">
+                    <input type="checkbox" id="checkbox7" />
+                    <label for="checkbox1">Більше 6</label>
+                  </div>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="card-button">
+          <button class="button-dost">
+            <p>Безкоштовна доставка від 2000грн</p>
+          </button>
+        </div>
+        <div class="product-card">
+          <div id="product-container">
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Maetki125.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Krila.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Сімейні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/HodyHero125.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Krila.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="product-container">
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Maetki125.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Krila.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Сімейні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/HodyHero125.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Krila.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="product-container">
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Maetki125.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Krila.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Сімейні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/HodyHero125.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Krila.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="product-container">
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Maetki125.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Krila.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Сімейні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/HodyHero125.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-Cat">
+              <div data-category="Дуельні" class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Krila.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New-2">
+                    <p>В кошик</p>
+                    <a href="#">Купити в 1 клік -></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Questions">
+      <div class="block-quest">
+        <li class="list-item">
+          <h2 class="mi2 main-item">
+            Настільна гра як їжа для розуму
+           <i class="fa-solid fa-chevron-down"></i>
+          </h2>
+          <ul class="sublist1">
+            <p>
+              Як жінці потрібен макіяж, немовляті - грудне молоко, а ласуні -
+              чергова шоколадка, так і мислячій людині постійно необхідна їжа
+              для розуму. Людина існує, поки вона мислить, щоб жити, вона
+              повинна думати, а тому розум є її основним знаряддям виживання.
+              Можна позаздрити вченим, їм завжди є, чим зайняти свою голову. Але
+              що робити звичайним людям? Розгадувати кросворди, судоку? Або
+              заливати свій мозок алкоголем? Вихід є! Настільна гра - кращий
+              засіб для розуму що простоює, якому ні до чого прикластися у
+              повсякденному житті. В процесі партії ви зможете задіяти вашу
+              пам'ять і логіку, дедукцію і стратегічне мислення. Вибирайте
+              дуельний абстракт, економічну стратегію, текстовий детектив - і
+              насолоджуйтеся розумовою трапезою! Аналізуйте варіанти,
+              прораховуйте ходи наперед, виводьте дедуктивні умовиводи,
+              розгадуйте головоломки і приймайте важливі рішення. Настільна гра
+              дозволить вашому розуму розправити плечі!
+            </p>
+          </ul>
+        </li>
+      </div>
+      <div class="block-quest">
+        <li class="list-item">
+          <h2 class="mi2 main-item">
+            Які настільні ігри зараз популярні
+            <i class="fa-solid fa-chevron-down"></i>
+          </h2>
+          <ul class="sublist1">
+            <p>
+              На сьогоднішній день, настільні ігри стають все популярнішими
+              серед любителів спільних розваг. Деякі з найбільш популярних ігор
+              на сьогоднішній день включають:<br />
+              1. "Кодемейкер" - це гра-головоломка, в якій гравці спробують
+              розгадати коди та розшифрувати таємниці. Це захоплююча гра для
+              шанувальників розумових викликів. <br />
+              2."Колонізатори з Катану" - стратегічна гра, де гравці будують та
+              розвивають свої колонії на острові Катан. Ця гра вимагає тактики,
+              взаємодії та ресурсного управління. <br />
+              3. "Дикі землі" - кооперативна гра, де гравці спільно будують
+              місто, захищаючи його від нападу монстрів. Ця гра змушує гравців
+              співпрацювати та приймати стратегічні рішення. "Кодове ім'я" -
+              командна гра, в якій гравці намагаються відгадати таємні слова,
+              пов'язані з певними шпигунськими кодовими словами. Це захоплююча
+              ігра для великих груп людей. "Відьмак: Пригоди на початку" -
+              пригодницька гра, яка базується на популярних книгах і грі
+              "Відьмак". Гравці вирушають у захоплюючі пригоди в магічному
+              світі. Це відмінний вибір для шанувальників фентезі та пригод.
+              Звичайно, популярність настільних ігор постійно змінюється, і на
+              ринку постійно з'являються нові та захоплюючі ігри. Вибір гри
+              залежить від ваших вподобань та інтересів, але ці п'ять ігор
+              можуть вважатись популярним
+            </p>
+          </ul>
+        </li>
+      </div>
+      <div class="block-quest">
+        <li class="list-item">
+          <h2 class="mi2 main-item">
+            Сучасні настільні ігри
+            <i class="fa-solid fa-chevron-down "></i>
+          </h2>
+          <ul class="sublist1">
+            <p>
+              У новітню добу виділилося дві школи настільних ігор - європейська
+              та американська. Ігри європейської школи характеризувалися крутою
+              механікою без елементів випадковості, але у цілому були позбавлені
+              конфліктності та атмосфери (за що і були прозвані «сухарями»). В
+              іграх американської школи, так званому «амерітреші», навпаки,
+              завжди була гарна атмосфера, багато красивого художнього тексту і
+              мініатюр, але занадто примітивна механіка, що зводилася до кидання
+              кубиків. Рано чи пізно повинні були з'явитися гібридні настільні
+              ігри, і ось вони з'явилися. «Кіклади» і «Серп», «Ініш» і «Кров і
+              Лють», «Сутінкова імперія» і «Владики Еллади». Всі ці та багато
+              інших ігор є на сайті Гікача. Втім, це великі стратегії. А що там
+              з більш простими іграми та настілками, які належать до інших
+              жанрів?
+            </p>
+          </ul>
+        </li>
+      </div>
+    </section>
+    <footer class="footerGame">
+      <div class="column1">
+        <img class="logodown" src="images/LogoTopPng.png" alt="logodown" />
+        <h2 class="board-place">м.Хмельницький, вул.Інститутська 11</h2>
+      </div>
+      <div class="column2">
+        <h2 class="alp">Каталог</h2>
+        <h3>D&D</h3>
+        <h3>Warhammer 40000</h3>
+        <h3>Настільні ігри</h3>
+        <h3>Magic: the Gathering</h3>
+        <h3>Аксесуари для ігор</h3>
+      </div>
+      <div class="column3">
+        <a href="#"><h3>Правила клубу</h3></a>
+        <a href="#"><h3>Заходи</h3></a>
+        <a href="#"><h3>Про нас</h3></a>
+        <a href="#"><h3>Контакти</h3></a>
+        <a href="#"><h3>Блог</h3></a>
+      </div>
+      <div class="column4">
+        <a href="#"><h3>Оплата і доставка</h3></a>
+        <a href="#"><h3>Гарантія і повернення</h3></a>
+      </div>
+      <div class="column5">
+        <a href="#subscription_form"
+          ><button class="button-footer" type="button">
+            Замовити дзвінок
+          </button></a
+        >
+        <h3>+380556548790</h3>
+        <h3>magiccodice@gmail.com</h3>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+    </footer>
+    <script src="JS/myScript.js"></script>
+    <script src="slidgpt.js"></script>
+    <script src="itc-slider.js"></script>
+    <script src="Categories.js"></script>
+  </body>
+</html>

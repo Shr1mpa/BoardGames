@@ -18,26 +18,25 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-
-    <script
-      src="https://kit.fontawesome.com/5e376815bd.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="FGames.css" />
+    <link rel="stylesheet" href="Cards.css" />
+    <link rel="stylesheet" href="slidergpt.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
 
     <title>MagiCodice</title>
   </head>
   <body>
     <!-- Heder with Logo -->
     <div class="header1">
-      <div class="logo">
-        <img class="logo-img" src="images/LogoTopPng.png" alt="" />
-      </div>
+      <a href="index.html"
+        ><div class="logo">
+          <img class="logo-img" src="images/LogoTopPng.png" alt="" /></div
+      ></a>
 
       <div class="phone">
         <div class="phone-holder">
@@ -46,15 +45,11 @@
           >
 
           <div class="profile-holder">
-            <a href="*">
+            <a href="login.php">
               <i class="fa-solid fa-user fa-xl"></i>
             </a>
           </div>
-          <div class="cart-holder">
-            <a href="*">
-              <i class="fa-solid fa-cart-shopping fa-xl"></i>
-            </a>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -64,20 +59,31 @@
         <div class="container">
           <div class="header-line">
             <div class="nav">
-              <a class="nav-item2 Menu" href="*"
-                ><i class="fa-solid fa-bars nav-icon"></i>Каталог</a
+              <div class="dropdown" >
+                <a class="nav-item2 Menu" href="#" onclick="smoothScroll('#Magic1')" 
+
+                  ><i class="fa-solid fa-bars nav-icon"></i>Каталог</a
+                >
+                <!-- <div class="dropdown-content">
+                  <a href="FamilyGames.html">Для сім'ї</a>
+                  <a href="#">Для двох</a>
+                  <a href="#">Для вечірок</a>
+                  <a href="#">Аксесуари</a>
+                </div> -->
+              </div>
+
+              <a class="nav-item" href="Events.html">Новини</a>
+              <a class="nav-item" href="TheGathering.html"
+                >Magic:the Gathering</a
               >
+              
+              <a class="nav-item" href="aboutUs.html">Про нас</a>
+              <a class="nav-item" href="#" onclick="smoothScroll('#Contacts')">Контакти</a>
 
-              <a class="nav-item" href="*">Wharhammer</a>
-              <a class="nav-item" href="*">Magic:the Cathering</a>
-              <a class="nav-item" href="*">D&D</a>
-              <a class="nav-item" href="*">Про нас</a>
-              <a class="nav-item" href="*">Контакти</a>
-
-              <a class="nav-item1" href="*"
+              <a class="nav-item1" href="https://www.instagram.com/igromag/"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
-              <a class="nav-item1" href="*"
+              <a class="nav-item1" href="https://www.facebook.com/IgromagUa/?locale=ru_RU"
                 ><i class="fa-brands fa-facebook"></i
               ></a>
             </div>
@@ -91,7 +97,7 @@
             <p class="discr-shop-club2">
               ігровому клубі «MagiCodice». Також ми навчаємо новачків
             </p>
-            <button class="Button-more" type="button">Детальніше</button>
+            <a href="TheGathering.html"><button class="Button-more" type="button">Детальніше</button></a>
           </div>
         </div>
       </div>
@@ -101,9 +107,9 @@
       <div class="content">
         <h2 class="content-name">Каталог найпопулярніших ігор</h2>
         <div class="wrapper-game">
-          <div  class="game-list">
+          <div class="game-list">
             <ul id="game-li" class="g-list1">
-              <li>
+              <li onclick="changeImage('images/ArchemHorror477.jpg')">
                 <h2>ЖАХ АРКХЕМА</h2>
               </li>
               <li>
@@ -143,12 +149,14 @@
           </div>
 
           <div class="photo-game">
-            <img
-              class="game-image"
-              id="game-image"
-              src="images/Kaldhaim.png"
-              alt="Зображення гри"
-            />
+            <div class="my-slider">
+              <div class="my-slider-inner">
+                <img src="images/ArchemHorror477.jpg" alt="Image 1" />
+                <img src="images/Kaldhaim.png" alt="Image 2" />
+                <img src="images/Zvir2.png" alt="Image 3" />
+                <img src="images/Kosa.jpg" alt="Image 4" />
+              </div>
+            </div>
             <div class="game-text">
               <p class="game-discr" id="game-description">
                 Всесвіт Magic: the Gathering - це безліч світів, кожен з яких
@@ -160,568 +168,674 @@
               </p>
             </div>
 
-            <button class="button-photo" type="button">Дізнатись більше</button>
+            <a href="TheGathering.html"><button class="button-photo" type="button">Дізнатись більше</button></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="Magic1">
+    <div id="Magic1" class="Magic1">
       <div class="Text-special"><h2>Спеціальні пропозиції</h2></div>
-
-      <div class="Card-line">
-        <div class="Card1">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Ходу Героям Нема</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/HodyHero.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2000 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card2">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Маєтки Божевілля</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Maetki.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">4180 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card3">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Крила</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Krila.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2499 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card4">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Brass: Бірмінгем </span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Brass.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2950 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card5">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Маєтки Божевілля</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Maetki.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2000 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card6">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Маєтки Божевілля</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Maetki.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2000 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="Buy-time"><h2>Встигни придбати</h2></div>
-      <div class="Card-line">
-        <div class="Card1">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Ходу Героям Нема</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/HodyHero.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2000 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card2">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Маєтки Божевілля</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Maetki.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">4180 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card3">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Крила</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Krila.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2499 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card4">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Brass: Бірмінгем </span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Brass.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2950 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="Magic2">
-        <div class="Activities-text"><h2>Найближчі заходи</h2></div>
-        <div class="News-line">
-          <div class="FirstNew">
-            <div class="sb-new">
-              <div class="tb-new">
-                <div class="new-image">
-                  <img
-                    class="image-for-news"
-                    src="images/NewsImage1.png"
-                    alt="Product Image"
-                  />
+      <div class="Card-menu1">
+        <div class="slider-container">
+          <div class="slider slider1">
+            <div
+              class="card"
+              onclick="redirectToPage('Tovar.html')"
+              data-card-id="1"
+            >
+              <div class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Ходу Героям Нема</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/HodyHero125.png" alt="Product Image" />
+                  </div>
+                  <h2>1970 ₴</h2>
+                  <div class="oval2-New">
+                    <p>Детальніше</p>
+                    <a href="#"> </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bottom-oval">
-              <div class="News-oval">
-                <a href="#"><p> Halloween c GoldFish <u> 31.10.2022 19:00</u><br>Ми зберемося, що дізнатися б, хто ж був
-                  Мафією і що буде з тим,кого вбили.</p></a>
-              </div>
-            </div>
-          </div>
-          <div class="SecondNew">
-            <div class="sb-new">
-              <div class="tb-new">
-                <div class="new-image">
-                  <img
-                    class="image-for-news"
-                    src="images/NewsImage2.png"
-                    alt="Product Image"
-                  />
+            <div class="card" onclick="redirectToPage('Maetki.html')">
+              <div class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Маєтки Божевілля</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Maetki125.png" alt="Product Image" />
+                  </div>
+                  <h2>2229 ₴</h2>
+                  <div class="oval2-New">
+                    <p>Детальніше</p>
+                    <a href="#"> </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bottom-oval">
-              <div class="News-oval">
-                <a href="#"><p> Вечір настільних ігор <u>10.12.2021 18:30</u><br>Щотижневі настільні ігротеки у різні ігри.
-                  Зустрічі відбуваються в антикафе, у кафе та бібліотеках..</p></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="Accesories"><h2>Аксесуари</h2></div>
-      <div class="Card-line">
-        <div class="Card1">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Ходу Героям Нема</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/HodyHero.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2000 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card2">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Маєтки Божевілля</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Maetki.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2000 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card3">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Маєтки Божевілля</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Maetki.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2000 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="Card4">
-          <div class="product-name">
-            <div class="oval1">
-              <span> Маєтки Божевілля</span>
-            </div>
-          </div>
-          <div class="second-bg">
-            <div class="third-bg">
-              <div class="product-image">
-                <img src="images/Maetki.png" alt="Product Image" />
-              </div>
-
-              <div class="product-price">2000 ₴</div>
-
-              <div class="product-buy">
-                <a href="#">Купити в 1 клік -></a>
-                <div class="arrow"></div>
-              </div>
-            </div>
-            <div class="product-action">
-              <div class="oval2">
-                <a href="#">В кошик</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="Interesting-info">
-        <h2>Більше цікавої інформації</h2>
-
-        <div class="Info-line">
-          <div class="FirstInfo">
-            <div class="sb-info">
-              <div class="tb-info">
-                <div class="info-image">
-                  <img
-                    class="image-for-info"
-                    src="images/InfoImage2.png"
-                    alt="Product Image"
-                  />
+            <div class="card">
+              <div class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Париж: Місто Вогнів</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Paris.png" alt="Product Image" />
+                  </div>
+                  <h2>1020 ₴</h2>
+                  <div class="oval2-New">
+                    <p>Детальніше</p>
+                    <a href="#"> </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bottom-oval-info">
-              <div class="info-oval">
-                <a href="#">Halloween c GoldFish 31.10.2022 19:00</a>
-              </div>
-            </div>
-          </div>
-          <div class="SecondInfo">
-            <div class="sb-info">
-              <div class="tb-info">
-                <div class="info-image">
-                  <img
-                    class="image-for-info"
-                    src="images/InfoImage.png"
-                    alt="Product Image"
-                  />
+            <div class="card">
+              <div class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Brass: Бірмінгем</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Brass1.png" alt="Product Image" />
+                  </div>
+                  <h2>2139 ₴</h2>
+                  <div class="oval2-New">
+                    <p>Детальніше</p>
+                    <a href="#"></a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bottom-oval-info">
-              <div class="info-oval">
-                <a href="#">Halloween c GoldFish 31.10.2022 19:00</a>
-              </div>
-            </div>
-          </div>
-          <div class="ThirdInfo">
-            <div class="sb-info">
-              <div class="tb-info">
-                <div class="info-image">
-                  <img
-                    class="image-for-info"
-                    src="images/InfoImage3.png"
-                    alt="Product Image"
-                  />
+            <div class="card">
+              <div class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Rallyman: GT - Core Box</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Game5.png" alt="Product Image" />
+                  </div>
+                  <h2>2259 ₴</h2>
+                  <div class="oval2-New">
+                    <p>Детальніше</p>
+                    <a href="#"></a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bottom-oval-info">
-              <div class="info-oval">
-                <a href="#">Halloween c GoldFish 31.10.2022 19:00</a>
+            <div class="card">
+              <div class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Azul: Stained Glass</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Azul.png" alt="Product Image" />
+                  </div>
+                  <h2>2100 ₴</h2>
+                  <div class="oval2-New">
+                    <p>Детальніше</p>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Obscurio</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Obscurio.png" alt="Product Image" />
+                  </div>
+                  <h2>2059 ₴</h2>
+                  <div class="oval2-New">
+                    <p>Детальніше</p>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-New">
+                <div class="sb-New">
+                  <div class="oval-New">
+                    <p>Сплячі Боги</p>
+                  </div>
+                  <div class="New-img">
+                    <img src="images/Gods.png" alt="Product Image" />
+                  </div>
+                  <h2>2000 ₴</h2>
+                  <div class="oval2-New">
+                    <p>Детальніше</p>
+                    <a href="#"></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <button class="button-know-more" type="button">Дізнатись більше</button>
-      </div>
-      <div class="wrapper-map-contacts">
-        <div class="Contacts">
-          <h2>Контакти</h2>
-          <a class="phone-num" href="*"
-            ><i class="fa-solid fa-phone"><p>Телефон: +38055664789</p></i></a
+        <div class="slider-controls">
+          <button
+            onclick="slidePrev('slider1')"
+            id="prevButton1"
+            class="PrevButton"
           >
-          <a class="e-mail" href="*"
-            ><i class="fa-solid fa-envelope"
-              ><p>E-mail: magiccodice@gmail.com</p></i
-            ></a
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button
+            onclick="slideNext('slider1')"
+            id="nextButton1"
+            class="NextButton"
           >
-          <a class="adress" href="*"
-            ><i class="fa-solid fa-location-dot"
-              ><p>м.Хмельницький, вул.Інститутська 11</p></i
-            ></a
-          >
-          <a class="graphic" href="*"
-            ><i class="fa-solid fa-clock"><p>11:00-23:00 (щодня)</p></i></a
-          >
-          <h4>Залишились питання?</h4>
-          <div class="inputs">
-            <h3 class="Text-name">Ім'я:</h3>
-            <input type="text" id="nameInput" placeholder="Ім'я" />
-
-            <h3 class="Text-phone">Номер телефону:</h3>
-            <input type="text" id="phoneInput" placeholder="Номер телефону" />
-
-            <h3 class="Text-comment">Коментар:</h3>
-            <input type="text" id="commentInput" placeholder="Коментар" />
-          </div>
-          <button class="button-inputs" type="button">Замовити дзвінок</button>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.0035381694056!2d26.957839376440305!3d49.40883877141216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4732068f357093b7%3A0xc4c40e1a0d42c702!2z0KXQvNC10LvRjNC90LjRhtC60LjQuSDQndCw0YbQuNC-0L3QsNC70YzQvdGL0Lkg0KPQvdC40LLQtdGA0YHQuNGC0LXRgg!5e0!3m2!1sru!2sua!4v1683284891571!5m2!1sru!2sua"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <!-- <div class="card-New">
+          <div class="oval-New">
+            
+          </div>
+
+        </div> -->
       </div>
+    </div>
+
+    <div class="Buy-time"><h2>Встигни придбати</h2></div>
+    <div class="Card-menu1">
+      <div class="slider-container">
+        <div class="slider slider2">
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Капітан Сонар</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Sonar.png" alt="Product Image" />
+                </div>
+                <h2>2000 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="redirectToPage('EldenRing.html')">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Володар Перснів</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Persten.png" alt="Product Image" />
+                </div>
+                <h2>2000 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Острів Скарбів</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Island.png" alt="Product Image" />
+                </div>
+                <h2>2000 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Зграя</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Zgraya.png" alt="Product Image" />
+                </div>
+                <h2>2000 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Каскадія (Cascadia)</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Kaskadia.png" alt="Product Image" />
+                </div>
+                <h2>2000 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Довжина Хвилі</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Line.png" alt="Product Image" />
+                </div>
+                <h2>2000 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button
+          onclick="slidePrev('slider2')"
+          id="prevButton2"
+          class="PrevButton"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button
+          onclick="slideNext('slider2')"
+          id="nextButton2"
+          class="NextButton"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <!-- <div class="card-New">
+          <div class="oval-New">
+            
+          </div>
+
+        </div> -->
+    </div>
+    <div class="Magic2">
+      <div class="Activities-text"><h2>Найближчі заходи</h2></div>
+      <div class="News-line">
+        <div class="FirstNew">
+          <div class="sb-new">
+            <div class="tb-new">
+              <div class="new-image">
+                <img
+                  class="image-for-news"
+                  src="images/NewsImage1.png"
+                  alt="Product Image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="bottom-oval">
+            <div class="News-oval">
+              <a href="#"
+                ><p>
+                  Вечір настільних ігор <u> 10.06.2023 19:00</u><br />Ми
+                  зберемося, що дізнатися б, хто ж був Мафією і що буде з
+                  тим,кого вбили.
+                </p></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="SecondNew">
+          <div class="sb-new">
+            <div class="tb-new">
+              <div class="new-image">
+                <img
+                  class="image-for-news"
+                  src="images/NewsImage2.png"
+                  alt="Product Image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="bottom-oval">
+            <div class="News-oval">
+              <a href="#"
+                ><p>
+                  Вечір настільних ігор <u>10.12.2021 18:30</u><br />Щотижневі
+                  настільні ігротеки у різні ігри. Зустрічі відбуваються в
+                  антикафе, у кафе та бібліотеках..
+                </p></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Accesories" class="Accesories"><h2>Аксесуари</h2></div>
+    <div class="Card-menu1">
+      <div class="slider-container">
+        <div class="slider slider3">
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Органайзер Колонізатори</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/OrganaizerCon.png" alt="Product Image" />
+                </div>
+                <h2>569 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New2">
+                <div class="oval-New">
+                  <p>Протектори  63,5 х 88 мм</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Protectors1.png" alt="Product Image" />
+                </div>
+                <h2>56 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Органайзер Манчкін</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Manchkin.png" alt="Product Image" />
+                </div>
+                <h2>473 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="redirectToPage('Organaizer.html')">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Органайзер Каркассон</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Carcassone.png" alt="Product Image" />
+                </div>
+                <h2>1000 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Оршанайзер Коса</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Organizer63.png" alt="Product Image" />
+                </div>
+                <h2>1020 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-New">
+              <div class="sb-New">
+                <div class="oval-New">
+                  <p>Ходу Героям Нема</p>
+                </div>
+                <div class="New-img">
+                  <img src="images/Manchkin.png" alt="Product Image" />
+                </div>
+                <h2>2000 ₴</h2>
+                <div class="oval2-New">
+                  <p>Детальніше</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button
+          onclick="slidePrev('slider3')"
+          id="prevButton3"
+          class="PrevButton"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button
+          onclick="slideNext('slider3')"
+          id="nextButton3"
+          class="NextButton"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <!-- <div class="card-New">
+          <div class="oval-New">
+            
+          </div>
+
+        </div> -->
+    </div>
+    <div class="Interesting-info">
+      <h2>Більше цікавої інформації</h2>
+
+      <div class="Info-line">
+        <div class="FirstInfo">
+          <div class="sb-info">
+            <div class="tb-info">
+              <div class="info-image">
+                <img
+                  class="image-for-info"
+                  src="images/InfoImage2.png"
+                  alt="Product Image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="bottom-oval-info">
+            <div class="info-oval">
+              <a href="#">Halloween c GoldFish 31.10.2022 19:00</a>
+            </div>
+          </div>
+        </div>
+        <div class="SecondInfo">
+          <div class="sb-info">
+            <div class="tb-info">
+              <div class="info-image">
+                <img
+                  class="image-for-info"
+                  src="images/InfoImage.png"
+                  alt="Product Image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="bottom-oval-info">
+            <div class="info-oval">
+              <a href="#">Вечір настільних ігор 20.06.2023 20:00</a>
+            </div>
+          </div>
+        </div>
+        <div class="ThirdInfo">
+          <div class="sb-info">
+            <div class="tb-info">
+              <div class="info-image">
+                <img
+                  class="image-for-info"
+                  src="images/InfoImage3.png"
+                  alt="Product Image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="bottom-oval-info">
+            <div class="info-oval">
+              <a href="#">Нічна ігротека 25.06.2023 21:30</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="Events.html"
+        ><button class="button-know-more" type="button">
+          Дізнатись більше
+        </button></a
+      >
+    </div>
+    <div id="Contacts" class="wrapper-map-contacts">
+      <form id="subscription_form" class="Contacts">
+        <h2>Контакти</h2>
+        <a class="phone-num" href="*"
+          ><i class="fa-solid fa-phone"><p>Телефон: +38055664789</p></i></a
+        >
+        <a class="e-mail" href="*"
+          ><i class="fa-solid fa-envelope"
+            ><p>E-mail: magiccodice@gmail.com</p></i
+          ></a
+        >
+        <a class="adress" href="*"
+          ><i class="fa-solid fa-location-dot"
+            ><p>м.Хмельницький, вул.Проскурівська 67</p></i
+          ></a
+        >
+        <a class="graphic" href="*"
+          ><i class="fa-solid fa-clock"><p>11:00-23:00 (щодня)</p></i></a
+        >
+        <h4>Залишились питання?</h4>
+        <div class="inputs">
+          <h3 class="Text-name">Ім'я:</h3>
+          <input
+            type="text"
+            id="nameInput"
+            name="name"
+            required
+            placeholder="Ім'я"
+          />
+
+          <h3 class="Text-phone">Номер телефону:</h3>
+          <input
+            type="text"
+            id="phoneInput"
+            name="num"
+            required
+            placeholder="Номер телефону"
+          />
+
+          <h3 class="Text-comment">Коментар:</h3>
+          <input
+            type="text"
+            id="commentInput"
+            name="comment"
+            required
+            placeholder="Коментар"
+          />
+        </div>
+        <button class="button-inputs" type="submit">Замовити дзвінок</button>
+      </form>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.342052682262!2d26.989405076441184!3d49.42134697141396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473206f153ee4d15%3A0x10ff7daae391e025!2z0JPRltCaIC0g0JzQsNCz0LDQt9C40L0g0LrQvtC80ZbQutGB0ZbQsiDRgtCwINC90LDRgdGC0ZbQu9GM0L3QuNGFINGW0LPQvtGA!5e0!3m2!1sru!2sua!4v1685954059723!5m2!1sru!2sua"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
 
     <footer class="con2">
       <div class="column1">
         <img class="logodown" src="images/LogoTopPng.png" alt="logodown" />
-        <h2 class="board-place">м.Хмельницький, вул.Інститутська 11</h2>
+        <h2 class="board-place">м.Хмельницький, вул.Проскурівська 67</h2>
       </div>
       <div class="column2">
         <h2 class="alp">Каталог</h2>
-        <h3>D&D</h3>
-        <h3>Warhammer 40000</h3>
-        <h3>Настільні ігри</h3>
-        <h3>Magic: the Gathering</h3>
-        <h3>Аксесуари для ігор</h3>
+        
+        
+        <h3 onclick="smoothScroll('#Magic1')">Настільні ігри</h3>
+        <a href="TheGathering.html"><h3>Magic: the Gathering</h3></a>
+        <h3 onclick="smoothScroll('#Accesories')">Аксесуари для ігор</h3>
       </div>
       <div class="column3">
-        <a href="#"><h3>Правила клубу</h3></a>
-        <a href="#"><h3>Міроприємства</h3></a>
-        <a href="#"><h3>Про нас</h3></a>
-        <a href="#"><h3>Контакти</h3></a>
-        <a href="#"><h3>Блог</h3></a>
+        
+        <a href="Events.html"><h3>Заходи</h3></a>
+        <a href="aboutUs.html"><h3>Про нас</h3></a>
+        <a href="#Contacts" ><h3>Контакти</h3></a>
+        
       </div>
-      <div class="column4">
-        <a href="#"><h3>Оплата і доставка</h3></a>
-        <a href="#"><h3>Гарантія і повернення</h3></a>
-      </div>
+      
       <div class="column5">
-        <button class="button-footer" type="button">Замовити дзвінок</button>
+        <a href="#subscription_form"
+          ><button class="button-footer" type="button">
+            Замовити дзвінок
+          </button></a
+        >
         <h3>+380556548790</h3>
         <h3>magiccodice@gmail.com</h3>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
+        <a class="nav-item1" href="https://www.instagram.com/igromag/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a class="nav-item1" href="https://www.facebook.com/IgromagUa/?locale=ru_RU"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
       </div>
     </footer>
-    <script src="myScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="FormSub.js"></script>
     <script src="ChangePhoto.js"></script>
-  
-    
+    <script src="slidgpt.js"></script>
+    <script src="JS/myScript.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/5e376815bd.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
